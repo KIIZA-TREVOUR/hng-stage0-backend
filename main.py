@@ -1,33 +1,23 @@
-from fastapi import FastAPI
 from datetime import datetime
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-# Create a FastAPI app
 app = FastAPI()
 
-# Enable CORS (Cross-Origin Resource Sharing)
+# Enable CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
-    allow_methods=["GET"],  # Allows only GET requests
-    allow_headers=["*"],  # Allows all headers
+    allow_origins=["*"],  # Allow all origins
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
 )
 
-# Define the API endpoint
-@app.get("/api")
-def get_info():
-    # Replace with your registered email
-    email = "kiizatrevour@gmail.com"
-    
-    # Get current datetime in ISO 8601 format (UTC)
-    current_datetime = datetime.utcnow().isoformat() + "Z"
-    
-    # Replace with your GitHub repository URL
-    github_url = "https://github.com/yourusername/your-repo"
-    
-    # Return JSON response
+# Define the root endpoint
+@app.get("/")
+async def get_info():
+    # Return data in JSON
     return {
-        "email": email,
-        "current_datetime": current_datetime,
-        "github_url": github_url
+        "email": "kiizatrevour@gmail.com",
+        "current_datetime": datetime.now().isoformat() + "Z",
+        "github_url": "https://github.com/KIIZA-TREVOUR/hng-stage0-backend",
     }

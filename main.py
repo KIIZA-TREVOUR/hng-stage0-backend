@@ -19,5 +19,5 @@ async def get_info():
     return {
         "email": "kiizatrevour@gmail.com",
         "current_datetime": datetime.now().isoformat() + "Z",
-        "github_url": "https://github.com/KIIZA-TREVOUR/hng-stage0-backend",
+        "github_url": "https://github.com/KIIZA-TREVOUR/hng-stage0-backend"
     }

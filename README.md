@@ -31,7 +31,7 @@ Open in browser: http://127.0.0.1:8000
 ## Endpoint
 
 Base URL:
-https://hng-stage0-production-0990.up.railway.app/
+https://hng-stage0-backend-ae6g.onrender.com/
 
 ## GET /
 
@@ -48,7 +48,7 @@ HTTP 200 OK
 
 ## Deployment
 
-The API is deployed on https://hng-stage0-production-0990.up.railway.app/
+The API is deployed on https://hng-stage0-backend-ae6g.onrender.com/
 
 ## Useful Links
 
